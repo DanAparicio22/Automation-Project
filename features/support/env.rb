@@ -3,6 +3,8 @@ require 'capybara'
 require 'capybara/dsl'
 require 'capybara/cucumber'
 
+ENV['USERCOMPANY']="company@mail.com"
+ENV['PSWCOMPANY']="Company1"
 
 Capybara.default_driver = :selenium
 

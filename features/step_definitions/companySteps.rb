@@ -1,6 +1,9 @@
-Given("I visit the page of bolsa de trabajo login page") do
+Given("I logged as company") do
   page.driver.browser.manage.window.maximize
   visit("http://bolsadetrabajo.ucbcba.edu.bo/users/profile")
+  fill_in('user_email', :with => ENV['USERCOMPANY'])
+  fill_in('user_password', :with => ENV['PSWCOMPANY'])
+  click_button("Iniciar Sesion")
 end
 
 When("I introduce my email and my password") do
@@ -14,15 +17,6 @@ end
 
 Then("I can see {string} message") do |string|
   page.should have_content(string)
-end
-
-
-Given("I logged as company") do
-  page.driver.browser.manage.window.maximize
-  visit("http://bolsadetrabajo.ucbcba.edu.bo/users/profile")
-  fill_in('user_email', :with => 'company@mail.com')
-  fill_in('user_password', :with => 'Company1')
-  click_button("Iniciar Sesion")
 end
 
 When("I click in {string} option") do |string|
