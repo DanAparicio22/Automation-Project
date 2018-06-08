@@ -1,4 +1,4 @@
-require 'rspec/expectations';
+require 'rspec/expectations'
 require 'capybara'
 require 'capybara/dsl'
 require 'capybara/cucumber'
