@@ -1,5 +1,5 @@
+@maximize
 Given("I logged as company") do
-  page.driver.browser.manage.window.maximize
   visit("http://bolsadetrabajo.ucbcba.edu.bo/users/profile")
   fill_in('user_email', :with => ENV['USERCOMPANY'])
   fill_in('user_password', :with => ENV['PSWCOMPANY'])
